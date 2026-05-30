@@ -1,0 +1,32 @@
+# Model weights (download separately from HuggingFace)
+pretrained/
+
+# Training outputs
+work_dirs/
+finetuning/work_dirs/
+
+# Dataset images (121MB, exceeds GitHub file limit; see README)
+datasets/Grounding-ToyData/toy_data.images.tsv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+
+# Logs & local notes
+*.log
+SETUP_LOG.md
+flash_attn_rebuild.log
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Misc
+tutorials/
+to_upload/
