@@ -20,7 +20,7 @@ torchrun --nnodes=1 --nproc_per_node=$NGPU finetuning/train.py \
     --eval_strategy "no" \
     --save_strategy "steps" \
     --save_steps 80 \
-    --save_total_limit 3 \
+    --save_total_limit 1 \
     --bf16 \
     --learning_rate 5e-5 \
     --mm_projector_lr 5e-5 \
@@ -36,4 +36,6 @@ torchrun --nnodes=1 --nproc_per_node=$NGPU finetuning/train.py \
     --dataloader_num_workers 4 \
     --run_name $run_name \
     --report_to none \
-    |& tee -a work_dirs/$run_name/output.log
+    2>&1 | tee -a work_dirs/$run_name/output.log
+
+exit ${PIPESTATUS[0]}

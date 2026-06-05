@@ -104,11 +104,11 @@ def main():
         model_path=model_path,
         backend="transformers",
         attn_implementation="sdpa",
-        max_tokens=4096,
+        max_tokens=512,
         temperature=0.0,
         top_p=0.05,
         top_k=1,
-        repetition_penalty=1.05,
+        repetition_penalty=1.2,
     )
 
     for image_path in image_paths:

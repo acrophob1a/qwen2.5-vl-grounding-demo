@@ -4,6 +4,32 @@ Visual grounding / open-vocabulary detection with [Qwen2.5-VL-3B-Instruct](https
 
 Based on [Brilliant-B/awesome-demos](https://huggingface.co/datasets/Brilliant-B/awesome-demos).
 
+## Results (SFT completed)
+
+Fine-tuning on 1K Grounding-ToyData samples, evaluated on 5 fixed test images:
+
+| Metric | Base model | After SFT |
+|--------|-----------|-----------|
+| Parse success | 3/5 | **5/5** |
+| Total boxes | 22 | 65 |
+| Output format | JSON / XML mixed | Unified grounding tokens |
+
+### Before / After comparisons
+
+**boys.jpg** — person detection
+
+![boys compare](records/results/exp-001/boys_compare.jpg)
+
+**cafe.jpg** — base model failed to parse (left shows failure placeholder)
+
+![cafe compare](records/results/exp-001/cafe_compare.jpg)
+
+**gui.png** · **layout.jpg** · **gndtest1** — see [`SHOWCASE.md`](SHOWCASE.md) or [`records/results/exp-001/`](records/results/exp-001/)
+
+Full report: [`logs/comparison/COMPARISON.md`](logs/comparison/COMPARISON.md)
+
+**Resume / portfolio copy**: [`RESUME.md`](RESUME.md) · Experiment log: [`records/experiments.md`](records/experiments.md)
+
 ## Setup
 
 ```bash

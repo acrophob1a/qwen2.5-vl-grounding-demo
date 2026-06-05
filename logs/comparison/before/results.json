@@ -1,0 +1,445 @@
+{
+  "phase": "before",
+  "model_path": "pretrained/Qwen2.5-VL-3B-Instruct",
+  "timestamp_utc": "2026-05-30T18:25:30.250126+00:00",
+  "attn_implementation": "flash_attention_2",
+  "cases": [
+    {
+      "image": "inference/test_images/boys.jpg",
+      "task": "detection",
+      "categories": [
+        "person",
+        "boy",
+        "ball",
+        "grass",
+        "tree"
+      ],
+      "success": true,
+      "error": null,
+      "raw_output": "```json\n[\n\t{\"bbox_2d\": [64, 243, 315, 750], \"label\": \"person\"},\n\t{\"bbox_2d\": [558, 449, 938, 1036], \"label\": \"person\"},\n\t{\"bbox_2d\": [714, 252, 848, 462], \"label\": \"person\"},\n\t{\"bbox_2d\": [798, 233, 975, 862], \"label\": \"person\"},\n\t{\"bbox_2d\": [1008, 237, 1178, 846], \"label\": \"person\"},\n\t{\"bbox_2d\": [1030, 386, 1473, 1036], \"label\": \"person\"},\n\t{\"bbox_2d\": [473, 333, 537, 434], \"label\": \"boy\"}\n]\n```<|im_end|>",
+      "extracted_predictions": {
+        "person": [
+          {
+            "type": "box",
+            "coords": [
+              64.0,
+              243.0,
+              315.0,
+              750.0
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              558.0,
+              449.0,
+              938.0,
+              1036.0
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              714.0,
+              252.0,
+              848.0,
+              462.0
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              798.0,
+              233.0,
+              975.0,
+              862.0
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              1008.0,
+              237.0,
+              1178.0,
+              846.0
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              1030.0,
+              386.0,
+              1473.0,
+              1036.0
+            ]
+          }
+        ],
+        "boy": [
+          {
+            "type": "box",
+            "coords": [
+              473.0,
+              333.0,
+              537.0,
+              434.0
+            ]
+          }
+        ]
+      },
+      "inference_time": 9.656554222106934,
+      "visualization": "logs/comparison/before/visualizations/boys_visualize.jpg",
+      "summary": {
+        "image": "inference/test_images/boys.jpg",
+        "task": "detection",
+        "success": true,
+        "output_format": "json",
+        "categories_requested": [
+          "person",
+          "boy",
+          "ball",
+          "grass",
+          "tree"
+        ],
+        "categories_parsed": [
+          "person",
+          "boy"
+        ],
+        "num_boxes": 7,
+        "parse_ok": true,
+        "raw_output_chars": 411,
+        "inference_time_s": 9.66,
+        "visualization": "logs/comparison/before/visualizations/boys_visualize.jpg"
+      }
+    },
+    {
+      "image": "inference/test_images/cafe.jpg",
+      "task": "detection",
+      "categories": [
+        "cup",
+        "coffee",
+        "table",
+        "chair",
+        "person",
+        "laptop"
+      ],
+      "success": true,
+      "error": null,
+      "raw_output": "```json\n[\n\t{\"bbox_2d\": [879, 445, 909, 486], \"label\": \"cup\"},\n\t{\"bbox_2d\": [823, 291, 845, 312], \"label\": \"coffee\"},\n\t{\"bbox_2d\": [502, 252, 510, 264], \"label\": \"coffee\"},\n\t{\"bbox_2d\": [587, 298, 612, 311], \"label\": \"table\"},\n\t{\"bbox_2d\": [575, 485, 857, 760], \"label\": \"table\"},\n\t{\"bbox_2d\": [10, 300, 316, 454], \"label\": \"table\"},\n\t{\"bbox_2d\": [442, 298, 1420, 454], \"label\": \"table\"},\n\t{\"bbox_2d\": [26, 328, 121, 452], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1132, 308, 1216, 402], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, 367, 1367, 418], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1280, 332, 1367, 438], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1074, 306, 1104, 340], \"label\": \"chair\"},\n\t{\"bbox_2d\": [1122, ",
+      "extracted_predictions": {},
+      "inference_time": 142.149249792099,
+      "visualization": null,
+      "summary": {
+        "image": "inference/test_images/cafe.jpg",
+        "task": "detection",
+        "success": true,
+        "output_format": "json",
+        "categories_requested": [
+          "cup",
+          "coffee",
+          "table",
+          "chair",
+          "person",
+          "laptop"
+        ],
+        "categories_parsed": [],
+        "num_boxes": 0,
+        "parse_ok": false,
+        "raw_output_chars": 6565,
+        "inference_time_s": 142.15,
+        "visualization": null
+      }
+    },
+    {
+      "image": "inference/test_images/gui.png",
+      "task": "gui_grounding",
+      "categories": [
+        "button",
+        "search bar",
+        "menu",
+        "icon",
+        "text field",
+        "sidebar"
+      ],
+      "success": true,
+      "error": null,
+      "raw_output": "<points x1=\"1438\" y1=\"36\" alt=\"button, search bar, menu, icon, text field, sidebar\">button, search bar, menu, icon, text field, sidebar</points><|im_end|>",
+      "extracted_predictions": {},
+      "inference_time": 2.3508284091949463,
+      "visualization": null,
+      "summary": {
+        "image": "inference/test_images/gui.png",
+        "task": "gui_grounding",
+        "success": true,
+        "output_format": "points_xml",
+        "categories_requested": [
+          "button",
+          "search bar",
+          "menu",
+          "icon",
+          "text field",
+          "sidebar"
+        ],
+        "categories_parsed": [],
+        "num_boxes": 0,
+        "parse_ok": false,
+        "raw_output_chars": 154,
+        "inference_time_s": 2.35,
+        "visualization": null
+      }
+    },
+    {
+      "image": "inference/test_images/layout.jpg",
+      "task": "detection",
+      "categories": [
+        "title",
+        "paragraph",
+        "image",
+        "table",
+        "header",
+        "footer"
+      ],
+      "success": true,
+      "error": null,
+      "raw_output": "```json\n[\n\t{\"bbox_2d\": [58, 79, 136, 114], \"label\": \"title\"},\n\t{\"bbox_2d\": [47, 162, 572, 352], \"label\": \"paragraph\"},\n\t{\"bbox_2d\": [378, 385, 572, 560], \"label\": \"image\"},\n\t{\"bbox_2d\": [378, 612, 572, 788], \"label\": \"image\"},\n\t{\"bbox_2d\": [26, 720, 572, 835], \"label\": \"paragraph\"},\n\t{\"bbox_2d\": [26, 840, 572, 859], \"label\": \"paragraph\"},\n\t{\"bbox_2d\": [26, 868, 572, 887], \"label\": \"paragraph\"},\n\t{\"bbox_2d\": [67, 894, 371, 907], \"label\": \"paragraph\"},\n\t{\"bbox_2d\": [187, 142, 385, 157], \"label\": \"header\"}\n]\n```<|im_end|>",
+      "extracted_predictions": {
+        "title": [
+          {
+            "type": "box",
+            "coords": [
+              58.0,
+              79.0,
+              136.0,
+              114.0
+            ]
+          }
+        ],
+        "paragraph": [
+          {
+            "type": "box",
+            "coords": [
+              47.0,
+              162.0,
+              572.0,
+              352.0
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              26.0,
+              720.0,
+              572.0,
+              835.0
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              26.0,
+              840.0,
+              572.0,
+              859.0
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              26.0,
+              868.0,
+              572.0,
+              887.0
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              67.0,
+              894.0,
+              371.0,
+              907.0
+            ]
+          }
+        ],
+        "image": [
+          {
+            "type": "box",
+            "coords": [
+              378.0,
+              385.0,
+              572.0,
+              560.0
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              378.0,
+              612.0,
+              572.0,
+              788.0
+            ]
+          }
+        ],
+        "header": [
+          {
+            "type": "box",
+            "coords": [
+              187.0,
+              142.0,
+              385.0,
+              157.0
+            ]
+          }
+        ]
+      },
+      "inference_time": 10.529832363128662,
+      "visualization": "logs/comparison/before/visualizations/layout_visualize.jpg",
+      "summary": {
+        "image": "inference/test_images/layout.jpg",
+        "task": "detection",
+        "success": true,
+        "output_format": "json",
+        "categories_requested": [
+          "title",
+          "paragraph",
+          "image",
+          "table",
+          "header",
+          "footer"
+        ],
+        "categories_parsed": [
+          "title",
+          "paragraph",
+          "image",
+          "header"
+        ],
+        "num_boxes": 9,
+        "parse_ok": true,
+        "raw_output_chars": 524,
+        "inference_time_s": 10.53,
+        "visualization": "logs/comparison/before/visualizations/layout_visualize.jpg"
+      }
+    },
+    {
+      "image": "testfiles/gndtest1.png",
+      "task": "detection",
+      "categories": [
+        "laptop",
+        "potted plant",
+        "white mug",
+        "notebook",
+        "pen",
+        "pencil holder"
+      ],
+      "success": true,
+      "error": null,
+      "raw_output": "```json\n[\n\t{\"bbox_2d\": [73, 65, 182, 149], \"label\": \"laptop\"},\n\t{\"bbox_2d\": [26, 85, 58, 127], \"label\": \"potted plant\"},\n\t{\"bbox_2d\": [199, 119, 238, 155], \"label\": \"white mug\"},\n\t{\"bbox_2d\": [0, 133, 62, 162], \"label\": \"notebook\"},\n\t{\"bbox_2d\": [25, 138, 46, 153], \"label\": \"pen\"},\n\t{\"bbox_2d\": [188, 89, 213, 119], \"label\": \"pencil holder\"}\n]\n```<|im_end|>",
+      "extracted_predictions": {
+        "laptop": [
+          {
+            "type": "box",
+            "coords": [
+              73.0,
+              65.0,
+              182.0,
+              149.0
+            ]
+          }
+        ],
+        "potted plant": [
+          {
+            "type": "box",
+            "coords": [
+              26.0,
+              85.0,
+              58.0,
+              127.0
+            ]
+          }
+        ],
+        "white mug": [
+          {
+            "type": "box",
+            "coords": [
+              199.0,
+              119.0,
+              238.0,
+              155.0
+            ]
+          }
+        ],
+        "notebook": [
+          {
+            "type": "box",
+            "coords": [
+              0.0,
+              133.0,
+              62.0,
+              162.0
+            ]
+          }
+        ],
+        "pen": [
+          {
+            "type": "box",
+            "coords": [
+              25.0,
+              138.0,
+              46.0,
+              153.0
+            ]
+          }
+        ],
+        "pencil holder": [
+          {
+            "type": "box",
+            "coords": [
+              188.0,
+              89.0,
+              213.0,
+              119.0
+            ]
+          }
+        ]
+      },
+      "inference_time": 7.11139702796936,
+      "visualization": "logs/comparison/before/visualizations/gndtest1_visualize.jpg",
+      "summary": {
+        "image": "testfiles/gndtest1.png",
+        "task": "detection",
+        "success": true,
+        "output_format": "json",
+        "categories_requested": [
+          "laptop",
+          "potted plant",
+          "white mug",
+          "notebook",
+          "pen",
+          "pencil holder"
+        ],
+        "categories_parsed": [
+          "laptop",
+          "potted plant",
+          "white mug",
+          "notebook",
+          "pen",
+          "pencil holder"
+        ],
+        "num_boxes": 6,
+        "parse_ok": true,
+        "raw_output_chars": 358,
+        "inference_time_s": 7.11,
+        "visualization": "logs/comparison/before/visualizations/gndtest1_visualize.jpg"
+      }
+    }
+  ],
+  "aggregate": {
+    "total_images": 5,
+    "parse_ok_count": 3,
+    "total_boxes": 22,
+    "output_formats": {
+      "json": 4,
+      "points_xml": 1
+    }
+  }
+}

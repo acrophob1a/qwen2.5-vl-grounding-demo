@@ -110,10 +110,6 @@ def parse_standard_prediction(text: str, w: int, h: int) -> Dict[str, List]:
         ...
     }
     """
-    json_result = parse_json_detection_prediction(text, w, h)
-    if json_result:
-        return json_result
-
     result = {}
 
     # Remove the end marker if present

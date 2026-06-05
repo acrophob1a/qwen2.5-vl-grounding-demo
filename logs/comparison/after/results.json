@@ -1,0 +1,885 @@
+{
+  "phase": "after",
+  "model_path": "work_dirs/grounding-sft-0",
+  "timestamp_utc": "2026-05-31T02:03:40.447127+00:00",
+  "attn_implementation": "flash_attention_2",
+  "cases": [
+    {
+      "image": "inference/test_images/boys.jpg",
+      "task": "detection",
+      "categories": [
+        "person",
+        "boy",
+        "ball",
+        "grass",
+        "tree"
+      ],
+      "success": true,
+      "error": null,
+      "raw_output": "<|object_ref_start|>person<|object_ref_end|><|box_start|><0><262><182><704><|box_end|>, <|object_ref_start|>boy<|object_ref_end|><|box_start|><37><207><203><710>,<304><435><651><997>,<364><198><447><444>,<479><263><575><646>,<582><260><696><836>,<667><261><802><912>,<730><317><960><998><|box_end|>, <|object_ref_start|>ball<|object_ref_end|><|box_start|><0><550><30><596><|box_end|>, <|object_ref_start|>grass<|object_ref_end|><|box_start|><0><520><998><996><|box_end|>, <|object_ref_start|>tree<|object_ref_end|><|box_start|><0><0><998><995><|box_end|><|im_end|>",
+      "extracted_predictions": {
+        "person": [
+          {
+            "type": "box",
+            "coords": [
+              0.0,
+              268.55655655655653,
+              279.83183183183183,
+              721.6176176176176
+            ]
+          }
+        ],
+        "boy": [
+          {
+            "type": "box",
+            "coords": [
+              56.888888888888886,
+              212.18018018018017,
+              312.12012012012013,
+              727.7677677677677
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              467.41141141141145,
+              445.8858858858859,
+              1000.936936936937,
+              1021.94994994995
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              559.6636636636637,
+              202.95495495495496,
+              687.2792792792793,
+              455.1111111111111
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              736.4804804804805,
+              269.5815815815816,
+              884.0840840840841,
+              662.1661661661661
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              894.8468468468468,
+              266.5065065065065,
+              1070.126126126126,
+              856.9209209209209
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              1025.5375375375377,
+              267.5315315315315,
+              1233.1051051051052,
+              934.8228228228228
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              1122.4024024024025,
+              324.93293293293294,
+              1476.036036036036,
+              1022.974974974975
+            ]
+          }
+        ],
+        "ball": [
+          {
+            "type": "box",
+            "coords": [
+              0.0,
+              563.7637637637638,
+              46.126126126126124,
+              610.9149149149149
+            ]
+          }
+        ],
+        "grass": [
+          {
+            "type": "box",
+            "coords": [
+              0.0,
+              533.013013013013,
+              1534.4624624624626,
+              1020.9249249249249
+            ]
+          }
+        ],
+        "tree": [
+          {
+            "type": "box",
+            "coords": [
+              0.0,
+              0.0,
+              1534.4624624624626,
+              1019.8998998998999
+            ]
+          }
+        ]
+      },
+      "inference_time": 4.187071084976196,
+      "visualization": "logs/comparison/after/visualizations/boys_visualize.jpg",
+      "summary": {
+        "image": "inference/test_images/boys.jpg",
+        "task": "detection",
+        "success": true,
+        "output_format": "sft_special_tokens",
+        "categories_requested": [
+          "person",
+          "boy",
+          "ball",
+          "grass",
+          "tree"
+        ],
+        "categories_parsed": [
+          "person",
+          "boy",
+          "ball",
+          "grass",
+          "tree"
+        ],
+        "num_boxes": 11,
+        "parse_ok": true,
+        "raw_output_chars": 564,
+        "inference_time_s": 4.19,
+        "visualization": "logs/comparison/after/visualizations/boys_visualize.jpg"
+      }
+    },
+    {
+      "image": "inference/test_images/cafe.jpg",
+      "task": "detection",
+      "categories": [
+        "cup",
+        "coffee",
+        "table",
+        "chair",
+        "person",
+        "laptop"
+      ],
+      "success": true,
+      "error": null,
+      "raw_output": "<|object_ref_start|>cup<|object_ref_end|><|box_start|><342><283><382><317>,<706><509><696><573><|box_end|>, <|object_ref_start|>coffee<|object_ref_end|><|box_start|><633><376><657><399><|box_end|>, <|object_ref_start|>table<|object_ref_end|><|box_start|><0><393><261><620>,<343><358><998>什么都不好<|box_end|>, <|object_ref_start|>chair<|object_ref_end|><|box_start|><19><420><92><529>,<25><444><70><550>,<47><381><120><502>,<78><378><153><493>,<319><435><347><596>,<404><407><447><575>,<431><412><471><548>,<479><417><510><546>,<544><442><618><549>,<645><432><700><566>,<682><465><745><567>,<851><388><945><543><|box_end|>, <|object_ref_start|>person<|object_ref_end|><|box_start|><30><320><122><481>,<57><332><127><490>,<82><335><194><520>,<142><351><264><507>,<286><318><392><649>,<306><207><370><438>,<409><262><472><371>,<505><270><583><538>,<570><285><646><565>,<640><301><740><671>,<730><260><802><461>,<766><276><814><495>,<806><240><859><491>,<861><291><948><558><|box_end|>, <|object_ref_start|>laptop<|object_ref_end|><|box_start|><118><339><182><359>,<498><299><527><353><|box_end|><|im_end|>",
+      "extracted_predictions": {
+        "cup": [
+          {
+            "type": "box",
+            "coords": [
+              492.97297297297297,
+              229.45945945945945,
+              550.6306306306307,
+              257.02702702702703
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              1017.6576576576576,
+              412.70270270270265,
+              1003.2432432432432,
+              464.5945945945946
+            ]
+          }
+        ],
+        "coffee": [
+          {
+            "type": "box",
+            "coords": [
+              912.4324324324325,
+              304.8648648648649,
+              947.0270270270271,
+              323.5135135135135
+            ]
+          }
+        ],
+        "table": [
+          {
+            "type": "box",
+            "coords": [
+              0.0,
+              318.64864864864865,
+              376.2162162162162,
+              502.7027027027027
+            ]
+          }
+        ],
+        "chair": [
+          {
+            "type": "box",
+            "coords": [
+              27.38738738738739,
+              340.5405405405406,
+              132.61261261261262,
+              428.91891891891885
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              36.03603603603604,
+              360.0,
+              100.90090090090091,
+              445.945945945946
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              67.74774774774775,
+              308.9189189189189,
+              172.97297297297297,
+              407.02702702702703
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              112.43243243243244,
+              306.4864864864865,
+              220.54054054054052,
+              399.72972972972974
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              459.8198198198198,
+              352.7027027027027,
+              500.1801801801802,
+              483.2432432432432
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              582.3423423423424,
+              330.0,
+              644.3243243243244,
+              466.21621621621625
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              621.2612612612612,
+              334.054054054054,
+              678.9189189189188,
+              444.32432432432427
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              690.4504504504505,
+              338.10810810810807,
+              735.1351351351352,
+              442.7027027027027
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              784.1441441441442,
+              358.3783783783784,
+              890.8108108108108,
+              445.13513513513516
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              929.7297297297297,
+              350.2702702702703,
+              1009.009009009009,
+              458.9189189189189
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              983.0630630630632,
+              377.02702702702703,
+              1073.873873873874,
+              459.7297297297297
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              1226.6666666666667,
+              314.5945945945946,
+              1362.162162162162,
+              440.27027027027026
+            ]
+          }
+        ],
+        "person": [
+          {
+            "type": "box",
+            "coords": [
+              43.24324324324324,
+              259.4594594594595,
+              175.85585585585585,
+              390.0
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              82.16216216216216,
+              269.18918918918916,
+              183.06306306306305,
+              397.2972972972973
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              118.1981981981982,
+              271.6216216216216,
+              279.63963963963965,
+              421.62162162162167
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              204.68468468468467,
+              284.5945945945946,
+              380.5405405405405,
+              411.0810810810811
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              412.2522522522522,
+              257.8378378378378,
+              565.0450450450451,
+              526.2162162162163
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              441.08108108108104,
+              167.83783783783784,
+              533.3333333333333,
+              355.13513513513516
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              589.5495495495495,
+              212.43243243243242,
+              680.3603603603603,
+              300.81081081081084
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              727.927927927928,
+              218.91891891891893,
+              840.3603603603602,
+              436.2162162162162
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              821.6216216216217,
+              231.0810810810811,
+              931.1711711711712,
+              458.1081081081081
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              922.5225225225225,
+              244.05405405405403,
+              1066.6666666666665,
+              544.0540540540541
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              1052.2522522522522,
+              210.81081081081084,
+              1156.036036036036,
+              373.78378378378375
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              1104.144144144144,
+              223.78378378378378,
+              1173.3333333333333,
+              401.35135135135135
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              1161.8018018018017,
+              194.59459459459458,
+              1238.1981981981983,
+              398.1081081081081
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              1241.081081081081,
+              235.94594594594594,
+              1366.4864864864865,
+              452.4324324324324
+            ]
+          }
+        ],
+        "laptop": [
+          {
+            "type": "box",
+            "coords": [
+              170.0900900900901,
+              274.8648648648649,
+              262.34234234234236,
+              291.0810810810811
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              717.8378378378378,
+              242.43243243243245,
+              759.6396396396397,
+              286.2162162162162
+            ]
+          }
+        ]
+      },
+      "inference_time": 7.2450220584869385,
+      "visualization": "logs/comparison/after/visualizations/cafe_visualize.jpg",
+      "summary": {
+        "image": "inference/test_images/cafe.jpg",
+        "task": "detection",
+        "success": true,
+        "output_format": "sft_special_tokens",
+        "categories_requested": [
+          "cup",
+          "coffee",
+          "table",
+          "chair",
+          "person",
+          "laptop"
+        ],
+        "categories_parsed": [
+          "cup",
+          "coffee",
+          "table",
+          "chair",
+          "person",
+          "laptop"
+        ],
+        "num_boxes": 32,
+        "parse_ok": true,
+        "raw_output_chars": 1099,
+        "inference_time_s": 7.25,
+        "visualization": "logs/comparison/after/visualizations/cafe_visualize.jpg"
+      }
+    },
+    {
+      "image": "inference/test_images/gui.png",
+      "task": "gui_grounding",
+      "categories": [
+        "button",
+        "search bar",
+        "menu",
+        "icon",
+        "text field",
+        "sidebar"
+      ],
+      "success": true,
+      "error": null,
+      "raw_output": "<|object_ref_start|>button<|object_ref_end|><|box_start|><47><37>TRGL<0><|box_end|>, <|object_ref_start|>search bar<|object_ref_end|><|box_start|><998><3><997><104><|box_end|>, <|object_ref_start|>menu<|object_ref_end|><|box_start|><870><16><996><70><|box_end|>, <|object_ref_start|>icon<|object_ref_end|><|box_start|><33><18><122><55>,<142><28><215><72>,<738><0><802><36><|box_end|>, <|object_ref_start|>text field<|object_ref_end|><|box_start|><342><8><689><54><|box_end|>, <|object_ref_start|>sidebar<|object_ref_end|><|box_start|><0><26><998><994><|box_end|><|im_end|>",
+      "extracted_predictions": {
+        "button": [],
+        "search bar": [
+          {
+            "type": "box",
+            "coords": [
+              1898.098098098098,
+              5.1891891891891895,
+              1896.1961961961963,
+              179.8918918918919
+            ]
+          }
+        ],
+        "menu": [
+          {
+            "type": "box",
+            "coords": [
+              1654.6546546546547,
+              27.675675675675677,
+              1894.294294294294,
+              121.08108108108108
+            ]
+          }
+        ],
+        "icon": [
+          {
+            "type": "box",
+            "coords": [
+              62.76276276276276,
+              31.135135135135133,
+              232.03203203203202,
+              95.13513513513514
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              270.0700700700701,
+              48.432432432432435,
+              408.9089089089089,
+              124.54054054054053
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              1403.6036036036037,
+              0.0,
+              1525.3253253253254,
+              62.27027027027027
+            ]
+          }
+        ],
+        "text field": [
+          {
+            "type": "box",
+            "coords": [
+              650.4504504504505,
+              13.837837837837839,
+              1310.4104104104103,
+              93.40540540540542
+            ]
+          }
+        ],
+        "sidebar": [
+          {
+            "type": "box",
+            "coords": [
+              0.0,
+              44.972972972972975,
+              1898.098098098098,
+              1719.3513513513512
+            ]
+          }
+        ]
+      },
+      "inference_time": 3.155496835708618,
+      "visualization": "logs/comparison/after/visualizations/gui_visualize.jpg",
+      "summary": {
+        "image": "inference/test_images/gui.png",
+        "task": "gui_grounding",
+        "success": true,
+        "output_format": "sft_special_tokens",
+        "categories_requested": [
+          "button",
+          "search bar",
+          "menu",
+          "icon",
+          "text field",
+          "sidebar"
+        ],
+        "categories_parsed": [
+          "button",
+          "search bar",
+          "menu",
+          "icon",
+          "text field",
+          "sidebar"
+        ],
+        "num_boxes": 7,
+        "parse_ok": true,
+        "raw_output_chars": 572,
+        "inference_time_s": 3.16,
+        "visualization": "logs/comparison/after/visualizations/gui_visualize.jpg"
+      }
+    },
+    {
+      "image": "inference/test_images/layout.jpg",
+      "task": "detection",
+      "categories": [
+        "title",
+        "paragraph",
+        "image",
+        "table",
+        "header",
+        "footer"
+      ],
+      "success": true,
+      "error": null,
+      "raw_output": "<|object_ref_start|>title<|object_ref_end|><|box_start|><142><89><261><138><|box_end|>, <|object_ref_start|>paragraph<|object_ref_end|><|box_start|><30><175><839><993><|box_end|>, <|object_ref_start|>image<|object_ref_end|><|box_start|><509><550><792><755>,<548><637><802><854><|box_end|>, <|object_ref_start|>table<|object_ref_end|><|box_start|><534><705><745><828><|box_end|>, <|object_ref_start|>header<|object_ref_end|><|box_start|><0><4><998><244><|box_end|>, <|object_ref_start|>footer<|object_ref_end|><|box_start|><278><997><996><997><|box_end|><|im_end|>",
+      "extracted_predictions": {
+        "title": [
+          {
+            "type": "box",
+            "coords": [
+              88.41241241241241,
+              87.21821821821823,
+              162.5045045045045,
+              135.23723723723722
+            ]
+          }
+        ],
+        "paragraph": [
+          {
+            "type": "box",
+            "coords": [
+              18.67867867867868,
+              171.4964964964965,
+              522.3803803803803,
+              973.1201201201202
+            ]
+          }
+        ],
+        "image": [
+          {
+            "type": "box",
+            "coords": [
+              316.9149149149149,
+              538.988988988989,
+              493.1171171171171,
+              739.8848848848849
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              341.19719719719717,
+              624.2472472472472,
+              499.34334334334335,
+              836.902902902903
+            ]
+          }
+        ],
+        "table": [
+          {
+            "type": "box",
+            "coords": [
+              332.48048048048054,
+              690.8858858858858,
+              463.8538538538538,
+              811.4234234234234
+            ]
+          }
+        ],
+        "header": [
+          {
+            "type": "box",
+            "coords": [
+              0.0,
+              3.91991991991992,
+              621.3773773773773,
+              239.11511511511512
+            ]
+          }
+        ],
+        "footer": [
+          {
+            "type": "box",
+            "coords": [
+              173.0890890890891,
+              977.0400400400401,
+              620.1321321321321,
+              977.0400400400401
+            ]
+          }
+        ]
+      },
+      "inference_time": 2.532099485397339,
+      "visualization": "logs/comparison/after/visualizations/layout_visualize.jpg",
+      "summary": {
+        "image": "inference/test_images/layout.jpg",
+        "task": "detection",
+        "success": true,
+        "output_format": "sft_special_tokens",
+        "categories_requested": [
+          "title",
+          "paragraph",
+          "image",
+          "table",
+          "header",
+          "footer"
+        ],
+        "categories_parsed": [
+          "title",
+          "paragraph",
+          "image",
+          "table",
+          "header",
+          "footer"
+        ],
+        "num_boxes": 7,
+        "parse_ok": true,
+        "raw_output_chars": 563,
+        "inference_time_s": 2.53,
+        "visualization": "logs/comparison/after/visualizations/layout_visualize.jpg"
+      }
+    },
+    {
+      "image": "testfiles/gndtest1.png",
+      "task": "detection",
+      "categories": [
+        "laptop",
+        "potted plant",
+        "white mug",
+        "notebook",
+        "pen",
+        "pencil holder"
+      ],
+      "success": true,
+      "error": null,
+      "raw_output": "<|object_ref_start|>laptop<|object_ref_end|><|box_start|><202><250><661><699><|box_end|>, <|object_ref_start|>potted plant<|object_ref_end|><|box_start|><42><283><109><453><|box_end|>, <|object_ref_start|>white mug<|object_ref_end|><|box_start|><698><567><852><680><|box_end|>, <|object_ref_start|>notebook<|object_ref_end|><|box_start|><1><565><224><704>,<0><550><194><668><|box_end|>, <|object_ref_start|>pen<|object_ref_end|><|box_start|><47><573><84><618>,<705><393><745><435><|box_end|>, <|object_ref_start|>pencil holder<|object_ref_end|><|box_start|><696><378><802><493><|box_end|><|im_end|>",
+      "extracted_predictions": {
+        "laptop": [
+          {
+            "type": "box",
+            "coords": [
+              50.55055055055055,
+              50.050050050050054,
+              165.4154154154154,
+              139.93993993993993
+            ]
+          }
+        ],
+        "potted plant": [
+          {
+            "type": "box",
+            "coords": [
+              10.510510510510512,
+              56.65665665665666,
+              27.27727727727728,
+              90.69069069069069
+            ]
+          }
+        ],
+        "white mug": [
+          {
+            "type": "box",
+            "coords": [
+              174.6746746746747,
+              113.51351351351352,
+              213.2132132132132,
+              136.13613613613614
+            ]
+          }
+        ],
+        "notebook": [
+          {
+            "type": "box",
+            "coords": [
+              0.2502502502502503,
+              113.11311311311312,
+              56.05605605605606,
+              140.94094094094095
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              0.0,
+              110.11011011011011,
+              48.54854854854855,
+              133.73373373373374
+            ]
+          }
+        ],
+        "pen": [
+          {
+            "type": "box",
+            "coords": [
+              11.761761761761763,
+              114.7147147147147,
+              21.021021021021024,
+              123.72372372372374
+            ]
+          },
+          {
+            "type": "box",
+            "coords": [
+              176.42642642642642,
+              78.67867867867868,
+              186.43643643643642,
+              87.08708708708708
+            ]
+          }
+        ],
+        "pencil holder": [
+          {
+            "type": "box",
+            "coords": [
+              174.17417417417417,
+              75.67567567567568,
+              200.7007007007007,
+              98.69869869869869
+            ]
+          }
+        ]
+      },
+      "inference_time": 2.855637788772583,
+      "visualization": "logs/comparison/after/visualizations/gndtest1_visualize.jpg",
+      "summary": {
+        "image": "testfiles/gndtest1.png",
+        "task": "detection",
+        "success": true,
+        "output_format": "sft_special_tokens",
+        "categories_requested": [
+          "laptop",
+          "potted plant",
+          "white mug",
+          "notebook",
+          "pen",
+          "pencil holder"
+        ],
+        "categories_parsed": [
+          "laptop",
+          "potted plant",
+          "white mug",
+          "notebook",
+          "pen",
+          "pencil holder"
+        ],
+        "num_boxes": 8,
+        "parse_ok": true,
+        "raw_output_chars": 598,
+        "inference_time_s": 2.86,
+        "visualization": "logs/comparison/after/visualizations/gndtest1_visualize.jpg"
+      }
+    }
+  ],
+  "aggregate": {
+    "total_images": 5,
+    "parse_ok_count": 5,
+    "total_boxes": 65,
+    "output_formats": {
+      "sft_special_tokens": 5
+    }
+  }
+}

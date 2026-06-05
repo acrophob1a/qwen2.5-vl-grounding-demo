@@ -1,0 +1,51 @@
+# exp-001 config snapshot — Grounding SFT on Qwen2.5-VL-3B-Instruct
+# Captured from actual training run (2026-05-31)
+
+experiment: exp-001
+run_name: grounding-sft-0
+git_sha: 6cef6e50f4c178bf36ded1f84b3f2005aec9a47d
+
+model:
+  base: pretrained/Qwen2.5-VL-3B-Instruct
+  tune_mm_vision: true
+  tune_mm_mlp: true
+  tune_mm_llm: true
+  add_grounding_specific_tokens: true
+
+data:
+  version: data-v1
+  dataset: datasets/Grounding-ToyData
+  train_samples: 1000
+  config_file: finetuning/configs/sft_gnd.py
+
+training:
+  num_train_epochs: 10
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 4
+  effective_batch_size: 16
+  learning_rate: 5.0e-5
+  mm_projector_lr: 5.0e-5
+  vision_tower_lr: 5.0e-6
+  lr_scheduler: cosine
+  warmup_ratio: 0.03
+  weight_decay: 0.01
+  max_grad_norm: 1
+  bf16: true
+  gradient_checkpointing: true
+  model_max_length: 4096
+  save_strategy: steps
+  save_steps: 80
+  save_total_limit: 1
+  logging_steps: 1
+  report_to: none
+
+hardware:
+  gpu: NVIDIA A800 80GB PCIe
+  nproc_per_node: 1
+
+output:
+  dir: work_dirs/grounding-sft-0
+  final_checkpoint: work_dirs/grounding-sft-0/checkpoint-620
+
+command: |
+  bash finetuning/scripts/sft_gnd.sh

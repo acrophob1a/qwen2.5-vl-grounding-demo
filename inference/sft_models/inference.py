@@ -6,7 +6,7 @@ from transformers import (
 from qwen_vl_utils import process_vision_info
 
 
-model_path = 'work_dirs/sft-0'
+model_path = "pretrained/Qwen2.5-VL-3B-Instruct"
 
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     model_path,
@@ -21,8 +21,8 @@ processor = AutoProcessor.from_pretrained(
 )
 
 
-image_path = 'inference/test_images/cafe.jpg'
-prompt = 'Describe this image.'
+image_path = '/root/autodl-tmp/demo1/aa3285b83063b833e7ab1f3510abe9ff.jpg'
+prompt = '能对这张照片进行目标检测吗'
 
 messages = [
     {

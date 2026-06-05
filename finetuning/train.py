@@ -120,7 +120,7 @@ def train(attn_implementation="flash_attention_2"):
         torch_dtype=(torch.bfloat16 if training_args.bf16 else None),
     )
 
-    data_args.image_processor = AutoProcessor.from_pretra ined(
+    data_args.image_processor = AutoProcessor.from_pretrained(
         model_args.model_name_or_path,
     ).image_processor
     data_args.model_type = "qwen2.5vl"
