@@ -27,6 +27,9 @@ flash_attn_rebuild.log
 .vscode/
 .DS_Store
 
+# Private / internal
+_private/
+
 # Misc
 tutorials/
 to_upload/
