@@ -6,11 +6,10 @@
 
 **人物检测** — 微调前仅检出 person/boy 两类，微调后覆盖所有指定类别（person / boy / ball / grass / tree），框更完整：
 
-![boys compare](records/results/exp-001/boys_compare.jpg)
+
 
 **咖啡馆场景** — 基座模型陷入 JSON 重复循环（输出 6565 字符、耗时 142 秒、解析失败），微调后 7.3 秒输出结构化结果，检出 6 类目标：
 
-![cafe compare](records/results/exp-001/cafe_compare.jpg)
 
 ### 量化对比
 
